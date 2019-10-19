@@ -22,8 +22,7 @@ class App extends Component{
         <PublicRoutes path="/login" component={Login} exact restricted={true} user={this.props.user} />
         <PrivateRoutes path="/admin" component={Admin} exact user={this.props.user} />
         <PublicRoutes path="/manufacturer" component={Manufacturer} exact user={this.props.user} restricted={false} />
-        <PublicRoutes path="/distributor" component={Manufacturer} exact user={this.props.user} restricted={false} />
-        <Route path="/manufacturer" component={Manufacturer} exact user={this.props.user} />
+        <PublicRoutes path="/distributor" component={Distributor} exact user={this.props.user} restricted={false} />
       </Switch>
       </>
     )

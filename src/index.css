@@ -123,3 +123,15 @@
     width: 60%;
     background:"linear-gradient(to right,rgba(205,52,181),rgba(68,166,187))"
 }
+
+.distributor-text-sec{
+    font-size: 28;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.distributor-text{
+    font-size: 30;
+    font-weight: 600;
+    color: black;
+}
