@@ -8,6 +8,7 @@ import PrivateRoutes from './components/PrivateRoutes/index'
 import Admin from './components/admin/admin'
 import Home from './components/home/home'
 import AppBar from './components/common/appbar'
+import Distributor from './components/Distributor/distributor'
 
 class App extends Component{
   render(){
@@ -21,6 +22,7 @@ class App extends Component{
         <PublicRoutes path="/login" component={Login} exact restricted={true} user={this.props.user} />
         <PrivateRoutes path="/admin" component={Admin} exact user={this.props.user} />
         <PublicRoutes path="/manufacturer" component={Manufacturer} exact user={this.props.user} restricted={false} />
+        <PublicRoutes path="/distributor" component={Manufacturer} exact user={this.props.user} restricted={false} />
         <Route path="/manufacturer" component={Manufacturer} exact user={this.props.user} />
       </Switch>
       </>
