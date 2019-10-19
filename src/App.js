@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React , {Component} from 'react';
+import { Route , Switch } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Manufacturer from './components/manufacturer/manufacturer'
+import Login from './components/login/Login'
+import PublicRoutes from './components/PublicRoutes/index'
+import PrivateRoutes from './components/PrivateRoutes/index'
+import Admin from './components/admin/admin'
+import Home from './components/home/home'
+import AppBar from './components/common/appbar'
+
+class App extends Component{
+  render(){
+    console.log(this.props.user)
+      
+    return(
+      <>
+      <AppBar user={this.props.user}/>
+      <Switch>
+        <PublicRoutes path="/" component={Home} exact restricted={false} user={this.props.user} />
+        <PublicRoutes path="/login" component={Login} exact restricted={true} user={this.props.user} />
+        <PrivateRoutes path="/admin" component={Admin} exact user={this.props.user} />
+        <PublicRoutes path="/manufacturer" component={Manufacturer} exact user={this.props.user} restricted={false} />
+        <Route path="/manufacturer" component={Manufacturer} exact user={this.props.user} />
+      </Switch>
+      </>
+    )
+  }
 }
+
 
 export default App;
