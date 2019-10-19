@@ -9,6 +9,7 @@ import Admin from './components/admin/admin'
 import Home from './components/home/home'
 import AppBar from './components/common/appbar'
 import Distributor from './components/Distributor/distributor'
+import Pharma from './components/Pharma/Pharma'
 
 class App extends Component{
   render(){
@@ -23,6 +24,7 @@ class App extends Component{
         <PrivateRoutes path="/admin" component={Admin} exact user={this.props.user} />
         <PublicRoutes path="/manufacturer" component={Manufacturer} exact user={this.props.user} restricted={false} />
         <PublicRoutes path="/distributor" component={Distributor} exact user={this.props.user} restricted={false} />
+        <PublicRoutes path="/pharma" component={Pharma} exact user={this.props.user} restricted={false} />
       </Switch>
       </>
     )

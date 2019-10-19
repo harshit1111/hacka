@@ -17,6 +17,9 @@ class Home extends Component {
         this.props.history.push("/distributor")
     }
 
+    togglePharma = () => {
+        this.props.history.push('/pharma')
+    }
 
     render() {
         return (
@@ -73,17 +76,17 @@ class Home extends Component {
                             <div className="button-wrapper">
                                 <div className="button">
                                     <div className="button-header mb-4 text-center" style={{ fontWeight: "100", fontSize: "40px" }}>
-                                        Manufacturer
+                                        Pharma
                                     </div>
                                     <div className="button-image">
-                                        <i className="fa fa-industry fa-5x"></i>
+                                        <i className="fa fa-medkit fa-5x"></i>
 
                                     </div>
                                     <div className="button-text">
                                         now secure your data as you will not even believ iy is posisbdnnd
                                     </div>
                                     <div className="button-button text-center mt-3">
-                                        <button className="btn btn-primary mx-auto btn-block" onClick={this.toggleManufacturer} style={{ width: "60%" }}>Go To Manufacturer</button>
+                                        <button className="btn btn-primary mx-auto btn-block" onClick={this.togglePharma} style={{ width: "60%" }}>Go To Pharma</button>
                                     </div>
                                 </div>
                             </div>

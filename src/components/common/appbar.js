@@ -78,22 +78,19 @@ import {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-3 text-white" navbar style={{width:"100%"}}>
               <NavItem className="text-light">
-                <NavLink href=""  style={{color:"white"}} onClick={(event) => this.scrollToElement(event,'why')}>WHY US</NavLink>
+                <NavLink href="/manufacturer"  style={{color:"white"}} >Manufacturer</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href=""  style={{color:"white"}} onClick={(event) => this.scrollToElement(event,'how')}>HOW It WORKS</NavLink>
+                <NavLink href="/pharma"  style={{color:"white"}} >Pharma</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="" style={{color:"white"}} onClick={(event) => this.scrollToElement(event,'about')}>ABOUT</NavLink>
+                <NavLink href="/admin" style={{color:"white"}} >Admin</NavLink>
               </NavItem>
               {!this.props.user ? 
               <NavItem className="ml-md-auto">
                 <NavLink  href="/login" style={{color:"white"}}>LOGIN</NavLink>
               </NavItem> : null}
-              {!this.props.user ? 
-              <NavItem className="">
-                <NavLink  href="/signup" style={{color:"white"}}>SIGNUP</NavLink>
-              </NavItem> : null }
+             
               
               {this.props.user ? 
               <NavItem className=" ml-md-auto" onClick={(event) => this.handleUserPanel(event)}>

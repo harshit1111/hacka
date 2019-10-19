@@ -146,8 +146,12 @@ class Distributor extends Component{
                 <div className="row mt-5">
                 <div className="col text-center">
                     <Button className="btn btn-block btn-outline-danger mx-auto" 
-                            style={{width:"60%" ,background:"linear-gradient(to right,rgba(205,52,181),rgba(0,0,0))",borderRadius:"10px"}}
-                            >Validate</Button>
+                            style={{width:"60%" ,
+                            background:"linear-gradient(to right,rgba(205,52,181),rgba(0,0,0))",
+                            borderRadius:"10px",
+                            fontSize:"20px"}}
+                            >Validate</Button>,
+                            
                 </div>
                 </div>
             </section>
